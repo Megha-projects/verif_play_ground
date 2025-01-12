@@ -4,6 +4,8 @@ from rest_framework.parsers import MultiPartParser,FormParser
 from rest_framework import status
 from .utils import excel_to_uvm_ral
 from django.http import FileResponse
+import base64
+import os
 
 class UvmRalGeneratorView(APIView):
     parser_classes = (MultiPartParser, FormParser)
