@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from verif_play_ground_app.views import UvmRalGeneratorView,UvmRalGeneratorbase64View
+from verif_play_ground_app.views import UvmRalGeneratorView,UvmRalGeneratorbase64View,DrawSystemBlockAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('generate-uvm-ral/', UvmRalGeneratorView.as_view(), name='generate-uvm-ral'),
     path('generate-uvm-ral-base/', UvmRalGeneratorbase64View.as_view(), name='generate-uvm-ral-base'),
+    path('drawSystemBlockAPIView/',DrawSystemBlockAPIView.as_view(), name='drawSystemBlockAPIView'),
 ]
